@@ -7,16 +7,56 @@
 
 
 
+@font-face{
+    font-family: roboto-reg;
+    src: url(/Fonts/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family: roboto-med;
+    src: url(/Fonts/Roboto-Medium.ttf);
+}
+@font-face{
+    font-family: roboto-bold;
+    src: url(/Fonts/Roboto-Bold.ttf);
+}
+@font-face{
+    font-family: roboto-black;
+    src: url(/Fonts/Roboto-Black.ttf);
+}
+
+
+
+
+a{
+    font-family: roboto-med;
+    
+    cursor: pointer;
+    text-decoration: underline;
+    
+    font-size: 0.9em;
+}
+
+
+
 
 nav{
-    width: 80vw;
-    height: 7vw;
-    background-color: dimgray;
-    position: relative;
-    left:10vw;
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
     
     display: flex;
     flex-flow: row;
+    
+    
+}
+nav #bg{
+    background-color: beige;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    
     
 }
 #nbild{
@@ -34,13 +74,14 @@ nav{
 
 nav .nbut{
     
-    width: 8vw;
-    height: 4vw;
-    background-color: red;
+    
     position: relative;
-    left: 30vw;
+    left: 20px;
     top: 1.5vw;
-    margin-left: 4vw;
+    
+    margin-left: 50px;
+    
+    
     
     
 }
@@ -52,6 +93,20 @@ nav #nmenu{
     right: 4vw;
     top: 1vw;
     background-color: green;
+}
+
+header{
+    
+    
+    
+    width: 100vw;
+    
+    height: 100vh;
+    
+    background-image: url(Headerpic.jpg);
+    background-size: cover;
+    
+    
 }
 
 
