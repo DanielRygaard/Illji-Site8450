@@ -2,7 +2,7 @@
     
     margin: 0;
     padding: 0;
-    
+    overflow: hidden;
 }
 
 
@@ -29,19 +29,40 @@
 #content{
     width: 100vw;
     height: 100vh;    
+    
+    
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+#bg{
+    
+    width: 100%;
+    height: 100%;
+    background-image: url(Headerpic.jpg);
+    filter: blur(5px);
+    
+    
+    
 }
 
 
-header{
-     width: 40vw;
-    height: 45vw;
 
-    background-color: aqua;    
+header{
+     width: 90vw;
+    height: 45vw;
+    
+    
+    
+
+    background-image: url(Headerpic.jpg);
+    background-size: cover;
     position: absolute;
 
     
-    top: 80px;
-    left: 600px;
+    top:2vw;
+    right: 5vw;
 
     
     
@@ -50,15 +71,48 @@ header{
 
 section{
     width: 30vw;
-    height: 40vw;
+    height: 45vw;
     
     background-color: aquamarine;
     
     position: absolute;
     
-    top: 110px;
-    left: 300px;
+    top: 0px;
+    z-index: 
 }
+
+header h1#prot{
+    
+    position: absolute;
+    
+    left: 40vw;
+    
+    font-size: 80px;
+    
+    color: black;
+    top: 10vw;
+    
+    
+    
+    
+    
+    
+    
+    
+}
+header h1#fix{
+  
+    position: absolute;
+    left: 50vw;
+    font-size: 70px;
+    top: 16vw;
+    color: black;
+    
+    
+    
+}
+
+
 
 
 
