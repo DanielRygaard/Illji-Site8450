@@ -1,8 +1,9 @@
-*{
+html{
     
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden;    
+    height: 100%;
 }
 
 
@@ -30,21 +31,60 @@
     width: 100vw;
     height: 100vh;    
     
-    
+    position: relative;
     
     overflow-y: scroll;
     overflow-x: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+    
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    font-family: roboto-reg;
+    
+    
     
 }
-#bg{
+
+
+content, content:before{
+    background: 50% 50% / cover;
+}
+
+
+#content::before{
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
     
-    width: 100%;
-    height: 100%;
-    background-image: url(Headerpic.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    overflow-x: hidden;
+    min-height: 100vh;
+}    
+
+
+#mainbg{
+    position: absolute;
+    width: 100vw; 
+    min-height: 100vh;
+    
     filter: blur(5px);
     
+    transform-origin: center center 0;
     
-    
+    background-image: url(Headerpic.jpg);
+   background-size: cover;
 }
 
 
@@ -54,11 +94,11 @@ header{
     height: 45vw;
     
     
-    
+    border-radius: 20px;
 
     background-image: url(Headerpic.jpg);
     background-size: cover;
-    position: absolute;
+    position:absolute;
 
     
     top:2vw;
@@ -73,40 +113,104 @@ section{
     width: 30vw;
     height: 45vw;
     
-    background-color: aquamarine;
     
     position: absolute;
     
     top: 0px;
-    z-index: 
+    z-index: 1;
+}
+
+#secbg{
+    
+    
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    opacity: 0.90;
+    filter: blur(5px);
+    z-index: 0;
+    position: absolute;
+    
+}
+header h1{
+    
+    color: white;
+    
+    font-family: roboto-reg;
+    z-index: 2;
+    
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+#title{
+    
+    position: absolute;
+    width: 420px;
+    height: 200px;
+    left: 20vw;
+    top: 10vw;
+    
+}
+
+
+header div#h1bg{
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    opacity: 0.7;
+    
+    position: absolute;
+    
+    
+    z-index: 1;
+    
+    
 }
 
 header h1#prot{
     
     position: absolute;
+ 
     
-    left: 40vw;
     
     font-size: 80px;
     
-    color: black;
-    top: 10vw;
+   
+    left: 30px;
+    top: 
+
     
     
     
-    
-    
+    color: white;
     
     
     
 }
+
+
+h1#prot:before{
+    color: black;
+    content: "Pro";
+}
+
+
 header h1#fix{
   
     position: absolute;
-    left: 50vw;
+    left:0px;
     font-size: 70px;
-    top: 16vw;
-    color: black;
+    top: 100px;
+    left: 150px;    
+ 
     
     
     
@@ -115,12 +219,142 @@ header h1#fix{
 
 
 
+div#bild{
+    background-image: url(Protein.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 200px;
+    height:300px;
+    
+    left: 5vw;
+    top: 14vw;
+    
+    z-index: 20;
+    
+    
+}
+
+h3#erbTitle{
+    top: 400px;
+    z-index: 10;
+    width: 350px;
+    height: 50px;
+    font-family: roboto-reg;
+    position:absolute;
+    text-align: center;
+    font-size: 30px
+}
+
+
+
+h3#erbUnder{
+    top: 460px;
+    z-index: 10;
+    width: 350px;
+    height: 50px;
+    font-family: roboto-reg;
+    font-size: 15px;
+    position:absolute;
+    text-align: center;
+    
+    color: gold;
+    
+}
+
+#erbPrice{
+    top: 500px;
+    z-index: 10;
+    width: 250px;
+    height: 100px;
+    font-family: roboto-reg;
+    font-size: 80px;
+    position:absolute;
+    text-align: center; 
+    
+    
+}
+
+
+section#erb button#show{
+    
+    width: 200px;
+    height: 100px;
+    
+    position: absolute;
+    top: 500px;
+    left: 240px;
+    
+    
+     border: none;
+    box-sizing: border-box;
+    
+    border: 2px black solid; 
+   
+    font-family: roboto-bold;
+    font-size: 30px;
+    
+    
+    
+}
+
+
+button{
+        width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    
+    border: 4px black solid; 
+    background-color: transparent;
+    font-family: roboto-bold;
+    font-size: 30px;
+    
+    transition-duration: 0.2s;
+}
+
+button:hover{
+    
+    
+    background-color: black;
+    color: white;
+   
+    
+}
+button#shop{
+    color: floralwhite;
+    position: absolute;
+    right: 200px;
+    bottom: 100px;
+    
+    border-color: white;
+    
+}
+button#shop:hover{
+   
+     border-color: black;
+}
 
 
 
 
 
 
+
+#off{
+    
+    width: 90vw;
+    
+    margin: 5vw;
+    height: 200px;
+    
+    position: absolute;
+    
+    
+    top: 10000px;
+    
+    
+    
+}
 
 
 
