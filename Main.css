@@ -4,9 +4,8 @@ html{
     padding: 0;
     overflow: hidden;    
     height: 100%;
+    max-width: 100vw;
 }
-
-
 
 @font-face{
     font-family: roboto-reg;
@@ -25,10 +24,8 @@ html{
     src: url(/Fonts/Roboto-Black.ttf);
 }
 
-
-
-#content{
-    width: 100vw;
+.content{
+    width: 100%;
     height: 100vh;    
     
     position: relative;
@@ -36,27 +33,23 @@ html{
     overflow-y: scroll;
     overflow-x: hidden;
     position: fixed;
-    left: 0;
+    
+    
     top: 0;
-    
-    
+    left: 0;
     margin: 0;
     padding: 0;
     perspective: 1px;
     transform-style: preserve-3d;
     font-family: roboto-reg;
-    
-    
+    overflow-x: hidden;
+    background-color: black;
     
 }
-
-
 content, content:before{
     background: 50% 50% / cover;
 }
-
-
-#content::before{
+.content::before{
     bottom: 0;
     content: "";
     left: 0;
@@ -64,30 +57,15 @@ content, content:before{
     right: 0;
     top: 0;
     display: block;
-    
+    background-image: url(Headerpic%20blurr%20one.png);
     background-size: cover;
     transform-origin: center center 0;
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-4px) scale(5.5);
     z-index: -1;
     overflow-x: hidden;
     min-height: 100vh;
+    max-width: 100vw;
 }    
-
-
-#mainbg{
-    position: absolute;
-    width: 100vw; 
-    min-height: 100vh;
-    
-    filter: blur(5px);
-    
-    transform-origin: center center 0;
-    
-    background-image: url(Headerpic.jpg);
-   background-size: cover;
-}
-
-
 
 header{
      width: 90vw;
@@ -103,12 +81,10 @@ header{
     
     top:2vw;
     right: 5vw;
-
+    
     
     
 }
-
-
 section{
     width: 30vw;
     height: 45vw;
@@ -118,6 +94,8 @@ section{
     
     top: 0px;
     z-index: 1;
+    
+    
 }
 
 #secbg{
@@ -142,14 +120,6 @@ header h1{
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
 #title{
     
     position: absolute;
@@ -159,7 +129,6 @@ header h1{
     top: 10vw;
     
 }
-
 
 header div#h1bg{
     width: 100%;
@@ -174,7 +143,6 @@ header div#h1bg{
     
     
 }
-
 header h1#prot{
     
     position: absolute;
@@ -195,14 +163,10 @@ header h1#prot{
     
     
 }
-
-
 h1#prot:before{
     color: black;
     content: "Pro";
 }
-
-
 header h1#fix{
   
     position: absolute;
@@ -215,9 +179,6 @@ header h1#fix{
     
     
 }
-
-
-
 
 div#bild{
     background-image: url(Protein.png);
@@ -245,9 +206,6 @@ h3#erbTitle{
     text-align: center;
     font-size: 30px
 }
-
-
-
 h3#erbUnder{
     top: 460px;
     z-index: 10;
@@ -261,7 +219,6 @@ h3#erbUnder{
     color: gold;
     
 }
-
 #erbPrice{
     top: 500px;
     z-index: 10;
@@ -274,7 +231,6 @@ h3#erbUnder{
     
     
 }
-
 
 section#erb button#show{
     
@@ -298,7 +254,6 @@ section#erb button#show{
     
 }
 
-
 button{
         width: 200px;
     height: 100px;
@@ -311,7 +266,6 @@ button{
     
     transition-duration: 0.2s;
 }
-
 button:hover{
     
     
@@ -334,28 +288,124 @@ button#shop:hover{
      border-color: black;
 }
 
-
-
-
-
-
-
 #off{
     
     width: 90vw;
     
     margin: 5vw;
-    height: 200px;
+    height: 400px;
     
     position: absolute;
     
     
-    top: 10000px;
+    top: 1000px;
+    
+    background-color: red;
+    border-radius: 10px;
+    
+    
+    
+    background-image: url(Headerpic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+#offbild{
+    
+    height: 80%;
+    width: 20%;
+    top: 60px;
+    position: absolute;
+    
+    background-image: url(Gainer.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+#offbutt{
+    
+    position: absolute;
+    
+    right: 10%;
+    top: 40%;
+    
+    
+}
+#offbg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.5;
+    
+}
+#offtitle{
+    
+    position: absolute;
+    
+    top: 40px;
+    left: 300px;
+    font-size: 40px;
+    
+    font-family: roboto-bold;
+    
+    
+}
+#offunder{
+    position: absolute;
+    font-size: 70px;
+    
+    left: 300px;
+    top: 100px;
+    border: Gold 2px solid;
+    
+}
+#offunder::after{
+    
+    
+    
+    content: "Sale";
+    color: gold;
+}
+    
+#off2{
+    
+    width: 90vw;
+    
+    margin: 5vw;
+    height: 400px;
+    
+    position: absolute;
+    
+    
+    top: 1800px;
+    
+    background-color: red;
+    border-radius: 10px;
+    
+    
+    
+    background-image: url(Headerpic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer{
+    
+    
+    height: 380px;
+    width: 99vw;
+    box-sizing: border-box;
+    
+    position: absolute;
+    top: 2500px;
+    
+    
     
     
     
 }
-
-
-
-
+footer.add{
+    border: gold solid 5px;
+}

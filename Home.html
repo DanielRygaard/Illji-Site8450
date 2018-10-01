@@ -10,9 +10,9 @@
 </head>
 <body>
     
-    
-    <div id="content">
-       <div id="mainbg"></div>
+    <div id="mainbg"></div>
+    <div class="content">
+       
         <header>
             
             <section id="erb">
@@ -30,7 +30,7 @@
             
             <div id="title">
                 <div id="h1bg"></div>
-                 <h1 id="prot">Protein</h1>
+                 <h1 id="prot">tein</h1>
                 <h1 id="fix">Fixarna</h1>
             </div>
             
@@ -38,6 +38,53 @@
             <button id="shop">SHOP</button>
            
         </header>
+        
+        
+        <section id="off">
+            <div id="offbg"></div>
+            
+            <div id="offbild"></div>
+            <h3 id="offtitle">Gainer ATLAS </h3>
+            <h3 id="offunder">40%</h3>
+            <button id="offbutt">BUY NOW</button>
+            
+            
+        </section>
+        
+        <section id="off2">
+            <div id="offbg"></div>
+            
+            <div id="offbild"></div>
+            <h3 id="offtitle">Gainer ATLAS </h3>
+            <h3 id="offunder">40%</h3>
+            <button id="offbutt">BUY NOW</button>
+            
+            
+        </section>
+        
+        
+        <footer></footer>
+        
+        
+        <script>
+        
+        
+            
+        $('content').scroll(function() {
+            var height = $('.content').scrollTop();
+                console.log("hej");
+            
+                $('footer').addClass('add');
+            
+        });
+            
+            
+            
+            
+        
+        
+        </script>
+        
         
     </div>
     
