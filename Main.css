@@ -27,15 +27,12 @@ html{
     src: url(/Fonts/Roboto-Black.ttf);
 }
 
-
-
 body{
     top: 0px;
     margin: 0;
     
     
 }
-
 
 /*NAVIGATION*/
 nav{
@@ -99,7 +96,7 @@ nav button#bigshop #bbg{
 }
 nav button.arrow{
          position: relative;
-     top: -100px;
+     left: -100px;
      width: 5vw;
     height: 5vw;
     box-sizing: border-box;
@@ -109,6 +106,8 @@ nav button.arrow{
     text-align: center;
     font-size: 80px;
     color: gold;
+    border-radius: 100px;
+    transform: rotate(-90deg);
 }
 nav button.arrow p{
     
@@ -131,7 +130,11 @@ nav .menu button{
     border: none;
     
 }
-
+nav .menu .Home{
+    background-image: url(House%20Black.png);
+    background-size: contain;
+    
+}
 
 /*SMALL NAV*/
 nav.down{
@@ -141,14 +144,11 @@ nav.down{
     
     
 }
-
 nav.down button.arrow{
-    top: 0px;
-    
+    left: 0;
     
     
 }
-
 nav.down button#bigshop{
     background-color: transparent;
     color: transparent;
@@ -172,7 +172,7 @@ nav.down .menu{
     position: absolute;
     
     width: 5vw;
-    height: 300px;
+    height: 304px;
     
     transition: 1s;
     
@@ -196,7 +196,6 @@ nav.down .menu button{
     
     
 }
-
 nav.down .menu button.shopsmall{
     border-top: solid 1px black;
     background-image: url(shopping%20cart.png);
@@ -213,6 +212,8 @@ nav.down .menu button.shopsmall:hover{
     
     
 }
+
+
 nav.down .menu #menubg{
     
     
@@ -230,7 +231,6 @@ nav.down .menu #menubg{
 }
 
 /*When arrow is pressed*/
-
 nav.down.on .menu{
   
     transition: 1s;
@@ -239,13 +239,14 @@ nav.down.on .menu{
     
     
 }
-
-
+nav.down.on button.arrow{
+    transform: rotate(90deg);
+    
+}
 
 
 
 /* MAIN WINDOW */
-
 .content{
    
     margin: 0;
@@ -273,12 +274,7 @@ nav.down.on .menu{
     
 }
 
-
-
-
 /* Main Window Parallax effekt */
-
-
 content, content:before{
     background: 50% 50% / cover;
 }
@@ -315,7 +311,6 @@ content, content:before{
 }    
 
 /*General*/
-
 button{
         width: 200px;
     height: 100px;
@@ -339,18 +334,10 @@ button:hover{
     
 }
 
-
-
-
-
-
 /*HEADER*/
-
-
 header{
      width: 90vw;
     height: 45vw;
-    
     
     border-radius: 20px;
 
@@ -358,13 +345,10 @@ header{
     background-size: cover;
     position:absolute;
 
-    
     top:6vw;
     right: 5vw;
-    
-    
-    
 }
+
 /*title*/
 header h1{
     
@@ -385,36 +369,24 @@ header #title{
     
 }
 header #title div#h1bg{
-    width: 100%;
-    height: 100%;
-    background-color: lightgrey;
-    opacity: 0.7;
     
     position: absolute;
-    
-    
     z-index: 1;
     
+    width: 100%;
+    height: 100%;
     
+    background-color: lightgrey;
+    opacity: 0.7;
 }
 header #title h1#prot{
     
     position: absolute;
  
-    
-    
+    left: 30px;
     font-size: 80px;
     
-   
-    left: 30px;
-    top: 
-
-    
-    
-    
     color: white;
-    
-    
     
 }
 header #title h1#prot:before{
@@ -427,13 +399,9 @@ header #title h1#fix{
     left:0px;
     font-size: 70px;
     top: 100px;
-    left: 150px;    
- 
-    
-    
+    left: 150px;
     
 }
-
 
 /*erbjudande vis dian av header*/
 header #erb{
@@ -468,15 +436,15 @@ header #erb div#bild{
     width: 10vw;
     height:10vw;
     
-    left: 5vw;
-    top: 10vw;
+    left: 15vw;
+    top: 24vw;
     
     z-index: 20;
     
     
 }
 header #erb h3#erbTitle{
-    top: 24vw;
+    top: 29vw;
     z-index: 10;
     width: 350px;
     height: 50px;
@@ -499,7 +467,7 @@ header #erb h3#erbUnder{
     
 }
 header #erb #erbPrice{
-    top: 30vw;
+    top: 29vw;
     z-index: 10;
     width: 250px;
     height: 100px;
@@ -507,6 +475,7 @@ header #erb #erbPrice{
     font-size: 80px;
     position:absolute;
     text-align: center; 
+    color: gold;
     
     
 }
@@ -534,8 +503,6 @@ header #erb button#show{
 }
 
 /*Shop button i header*/
-
-
 button#shop{
     color: floralwhite;
     position: absolute;
@@ -550,10 +517,7 @@ button#shop:hover{
      border-color: black;
 }
 
-
-
 /* Section Offer */
-
 section.off button{
     
     font-size: 40px;
@@ -570,22 +534,16 @@ section.off button{
     
     position: absolute;
     
-    
     top: 1000px;
     
     background-color: red;
     border-radius: 10px;
     
-    
-    
     background-image: url(Headerpic.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    
-    
 }
 #off #offbild{
-    
     height: 80%;
     width: 20%;
     top: 60px;
@@ -597,13 +555,9 @@ section.off button{
     
 }
 #off #offbutt{
-    
     position: absolute;
-    
     right: 10%;
     top: 40%;
-    
-    
 }
 #off #offbg{
     position: absolute;
@@ -614,16 +568,13 @@ section.off button{
     
 }
 #off #offtitle{
-    
     position: absolute;
     
     top: 40px;
     left: 300px;
     font-size: 40px;
     
-    font-family: roboto-bold;
-    
-    
+    font-family: roboto-bold;    
 }
 #off #offunder{
     position: absolute;
@@ -631,19 +582,13 @@ section.off button{
     
     left: 300px;
     top: 100px;
-    border: Gold 2px solid;
-    
+    border: Gold 2px solid; 
 }
 #off #offunder::after{
-    
-    
-    
     content: "Sale";
     color: gold;
 }
     
-
-
 /* Section offer number 2*/
 #off2{
     
@@ -725,13 +670,8 @@ section.off button{
     color: gold;
 }
 
-
-
 /* FOOTER */
-
 footer{
-    
-    
     height: 380px;
     width: 99vw;
     box-sizing: border-box;
@@ -740,11 +680,8 @@ footer{
     top: 2500px;
     
     border: transparent solid 5px;
-    
     transition: 1s;
-    
 }
-
 footer button{
     width: 15vw;
     height: 10vw;
@@ -758,41 +695,23 @@ footer button{
     
      font-size: 60px;
     transition: 1s;
-    
 }
-
 footer.add button{
-   
     color:gold;
     border-color: gold;
-   
-    
-    
 }
-
 footer button:hover{
-    
-    
     color: black;
     background-color: gold;
     content:"Kontakt us";
-    
-    
 }
-
 footer.add{
-    
     border-color: gold;
-    
-    
-    
 }
 
 
 
-
-
-
+/*Media queries*/
 @media only screen and (max-width: 1000px) {
     
 }
