@@ -13,7 +13,7 @@
     
     
     
-    
+    <button class="arrow"><p>&#8681</p></button>
     <!-- NAVIGERING-->
     <nav>
        
@@ -25,11 +25,11 @@
         
         <div class="bigmenu">
            
-            <a href="" class="navbutt butt1">Home</a>
-            <a href="" class="navbutt butt2">contact us</a>
+            <button href="" class="navbutt left butt1">Home</button>
+            <button href="" class="navbutt butt2">Contact us</button>
             <button id="bigshop"><div id="bbg"></div>SHOP</button>
-            <a href="" class="navbutt butt3">Cart</a>
-            <a href="" class="navbutt right butt4">Profile</a>
+            <button href="" class="navbutt butt3">Cart</button>
+            <button href="" class="navbutt right butt4">Profile</button>
         </div>
         
         
@@ -37,7 +37,7 @@
         
         
         <!-- ARROW KEY -->
-        <button class="arrow"><p>&#8681</p></button>
+        
        
         
         <!-- Small Nav -->
@@ -166,12 +166,14 @@
             
             if($(".content").scrollTop() >200){
                 $('nav').addClass("down");
-                
+                $(".arrow").addClass("out");
                 
             }else{
                 $(".down").removeClass("on");
                 $('nav').removeClass("down");
-                
+                $(".arrow").removeClass("out");
+               
+                $(".arrow").removeClass("on").waitSeconds(1);
                 
             }
             
@@ -180,10 +182,13 @@
             
         $(".arrow").click(function(){
            
-            if(!$(".down").hasClass("on"))
-            $(".down").addClass("on")
+            if(!$(".down").hasClass("on")){
+            $(".down").addClass("on");
+            $(".arrow").addClass("on");
+            }
             else{
                 $(".down").removeClass("on");
+                $(".arrow").removeClass("on");
             }
             
             

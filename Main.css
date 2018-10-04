@@ -36,9 +36,6 @@ body{
 
 /*NAVIGATION*/
 nav{
-    transition: 0.5s;
-}
-nav{
     
     width: 100vw;
     height: 4.5vw;
@@ -54,7 +51,7 @@ nav{
     visibility: visible;
     
     
-    
+    transition: 0.5s;
     
     
 }
@@ -81,7 +78,7 @@ nav button#bigshop{
     height: 6vw;
     margin-right: 11.25vw;
     
-    
+    font-size: 50px;
 }
 nav button#bigshop #bbg{
     position: absolute;
@@ -94,9 +91,11 @@ nav button#bigshop #bbg{
     
    z-index: -1;
 }
-nav button.arrow{
-    position: relative;
+button.arrow{
+    position: absolute;
     left: -100px;
+    top: 0;
+    
     width: 5vw;
     height: 5vw;
     
@@ -104,16 +103,20 @@ nav button.arrow{
     border: none;
     
     transition: 1s;
+    z-index: 2;
     
     visibility: visible;
     text-align: center;
     font-size: 80px;
     color: gold;
     
-    border-radius: 100px;
     transform: rotate(-90deg);
 }
-nav button.arrow p{
+button.arrow:hover{
+    color: black;
+    background-color: transparent;
+}
+button.arrow p{
     
     position: absolute;
     width: 5vw;
@@ -146,7 +149,6 @@ nav .menu .Home:hover{
 }
 
 /* Big Nav Buttons */
-
 nav .bigmenu{
     width: 100%;
     height: 100%;
@@ -158,58 +160,48 @@ nav .bigmenu .navbutt{
     position: relative;
     width: 10vw;
     height: 2.5vw;
-    margin-right: 11.25vw;
+    margin-right: 10.75vw;
     text-align: center;
-    top: 2vw;
+    top: 1vw;
     color: black;
-    font-family: robot-reg;
+    font-family: roboto-reg;
+    font-size: 30px;
+    border-color: gold;
+    overflow: hidden;
+    
+}
+nav .bigmenu .navbutt:hover{
+    color: Gold;
 }
 nav .bigmenu .navbutt.right{
     margin-right: 0;
     
     
 }
+nav .bigmenu .navbutt.left{
+    margin-left: 0.7vw;
+}
 
-/*SMALL NAV*/
+/*Small nav buttons*/
 nav.down{
-    width: 5vw;
-    height: 5vw;
+    top: -6vw;
     
     
     
 }
-nav.down button.arrow{
+button.arrow.out{
     left: 0;
-
+    top: 0;
     
-}
-nav.down button#bigshop{
-    background-color: transparent;
-    color: transparent;
-    border: transparent;
-    
-    visibility: hidden;
-    
-    
-}
-nav.down button#bigshop #bbg{
-    
-    background-color: transparent;
-    color: transparent;
-    border: transparent;
-    
-}
-nav.down .bigmenu{
-    display: none;
 }
 nav.down .menu{
 
     
     
     position: absolute;
-    
+    top: 12vw;
     width: 5vw;
-    height: 304px;
+    height: 20vw;
     
     transition: 1s;
     
@@ -278,8 +270,8 @@ nav.down.on .menu{
     
     
 }
-nav.down.on button.arrow{
-    transform: rotate(90deg);
+button.arrow.on{
+    transform: rotate(180deg);
     
 }
 
@@ -429,7 +421,7 @@ button:hover{
     
     
     background-color: black;
-    color: white;
+    color: gold;
    
     
 }
