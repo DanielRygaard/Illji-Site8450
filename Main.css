@@ -95,17 +95,21 @@ nav button#bigshop #bbg{
    z-index: -1;
 }
 nav button.arrow{
-         position: relative;
-     left: -100px;
-     width: 5vw;
+    position: relative;
+    left: -100px;
+    width: 5vw;
     height: 5vw;
+    
     box-sizing: border-box;
     border: none;
+    
     transition: 1s;
+    
     visibility: visible;
     text-align: center;
     font-size: 80px;
     color: gold;
+    
     border-radius: 100px;
     transform: rotate(-90deg);
 }
@@ -131,10 +135,17 @@ nav .menu button{
     
 }
 nav .menu .Home{
-    background-image: url(House%20Black.png);
+    background-image: url(House%20Black2.png);
     background-size: contain;
     
 }
+nav .menu .Home:hover{
+    background-image: url(House%20White2.png);
+    background-size: contain;
+    
+}
+
+
 
 /*SMALL NAV*/
 nav.down{
@@ -146,7 +157,7 @@ nav.down{
 }
 nav.down button.arrow{
     left: 0;
-    
+
     
 }
 nav.down button#bigshop{
@@ -196,6 +207,13 @@ nav.down .menu button{
     
     
 }
+nav.down .menu button:hover{
+   width: 10vw;
+    
+    
+    
+    
+}
 nav.down .menu button.shopsmall{
     border-top: solid 1px black;
     background-image: url(shopping%20cart.png);
@@ -206,14 +224,9 @@ nav.down .menu button.shopsmall{
 }
 nav.down .menu button.shopsmall:hover{
     
-    background-image: url(Shopping%20cart%20white.png)
-    
-    
-    
+    background-image: url(Shopping%20cart%20white.png);
     
 }
-
-
 nav.down .menu #menubg{
     
     
@@ -230,6 +243,7 @@ nav.down .menu #menubg{
     
 }
 
+
 /*When arrow is pressed*/
 nav.down.on .menu{
   
@@ -244,7 +258,69 @@ nav.down.on button.arrow{
     
 }
 
+/* Small nav out */
 
+.out{
+    width: 200px;
+    height: 5vw;
+    
+    
+    position: absolute;
+    transition: 1s;
+    left: -200px;
+    
+  
+    
+    z-index: -2;
+    
+}
+.out#homeout{
+    top: 0;
+}
+.out#shopout{
+    top: 5vw;
+}
+.out#lagerout{
+    top: 10vw;
+}
+.out#profileout{
+    top: 15vw;
+}
+.out p{
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    
+    text-align: center:
+    
+    
+}
+
+.menu .Home:hover .out#homeout{
+    top: 0;
+    left: 5vw;
+  
+    
+}
+.menu .shopsmall:hover .out#shopout{
+    top: 5vw;
+    left: 5vw;
+  
+    
+}
+.menu .lager:hover .out#lagerout{
+    top: 10vw;
+    left: 5vw;
+  
+    
+}
+.menu .profile:hover .out#profileout{
+    top: 15vw;
+    left: 5vw;
+  
+    
+}
 
 /* MAIN WINDOW */
 .content{
@@ -254,8 +330,8 @@ nav.down.on button.arrow{
     
     width: 100%;
     height: 100vh;    
-    
-    
+    max-width: 100%;
+    min-width: 100vw;
     position: relative;
     top: 0;
     left: 0;
@@ -304,7 +380,7 @@ content, content:before{
     
     
     transform-origin: center center 0;
-    transform: translateZ(-4px) scale(5.5);
+    transform: translateZ(-4px) scale(5.2);
     
     overflow-x: hidden;
     
@@ -502,7 +578,7 @@ header #erb button#show{
     
 }
 
-/*Shop button i header*/
+/* Shop button i header */
 button#shop{
     color: floralwhite;
     position: absolute;
@@ -724,10 +800,6 @@ footer.add{
     
 }
 
-
-
-
-
 @media only screen and (max-width: 1462px) {
 
     
@@ -746,6 +818,7 @@ footer.add{
     
     
 }
+
 @media only screen and (max-width: 500px) {
     body{
         
