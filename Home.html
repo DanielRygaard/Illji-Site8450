@@ -51,7 +51,7 @@
             
             <button class="shopsmall">
                 <div class="out" id="shopout">
-                    <p>Shop</p>
+                    <p>Cart</p>
                 </div>
             </button>
             
@@ -61,7 +61,7 @@
             
             <button class="profile">&#9993;
                 <div class="out" id="profileout">
-                    <p>Home</p>
+                    <p>Contact Us</p>
                 </div>
             </button>
             
@@ -172,8 +172,10 @@
                 $(".down").removeClass("on");
                 $('nav').removeClass("down");
                 $(".arrow").removeClass("out");
-               
-                $(".arrow").removeClass("on").waitSeconds(1);
+                setTimeout(function() {
+                   $(".arrow").removeClass("on");
+               }, 300);
+                
                 
             }
             

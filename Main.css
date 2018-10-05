@@ -160,13 +160,14 @@ nav .bigmenu .navbutt{
     position: relative;
     width: 10vw;
     height: 2.5vw;
-    margin-right: 10.75vw;
+    margin-right: 8.75vw;
     text-align: center;
     top: 1vw;
     color: black;
     font-family: roboto-reg;
     font-size: 30px;
     border-color: gold;
+    border-width: 1px;
     overflow: hidden;
     
 }
@@ -179,7 +180,7 @@ nav .bigmenu .navbutt.right{
     
 }
 nav .bigmenu .navbutt.left{
-    margin-left: 0.7vw;
+    margin-left: 4vw;
 }
 
 /*Small nav buttons*/
@@ -271,7 +272,7 @@ nav.down.on .menu{
     
 }
 button.arrow.on{
-    transform: rotate(180deg);
+    transform: rotate(90deg);
     
 }
 
@@ -802,45 +803,79 @@ footer.add{
 }
 
 /*Media queries*/
+/*Nav*/
+@media only screen and (max-width: 1600px) {
+    
+}
+@media only screen and (max-width: 1400px) {
+  
+    nav .bigmenu .navbutt{
+        font-size: 20px;
+        
+        
+    }
+    
+    .arrow p{
+        font-size: 60px;
+        text-align: center;
+        
+    }
+    
+    
+}
+
+
 @media only screen and (max-width: 1000px) {
-    
-}
-
-@media only screen and (max-width: 500px) {
-   
-}
-
-@media only screen and (max-width: 300px) {
-    
-}
-
-@media only screen and (max-width: 1462px) {
-
-    
-    
-    button#show{
-        
-        font-size-adjust: auto;
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-}
-
-@media only screen and (max-width: 500px) {
-    body{
-        
-        display: none;
+    nav .bigmenu .navbutt{
+        font-size: 15px;
         
         
     }
+    nav .bigmenu #bigshop{
+        font-size: 40px;
+        
+    }
+    
+    .arrow p{
+        font-size: 45px;
+        
+    }
+    
 }
+
+@media only screen and (max-width: 800px) {
+    nav .bigmenu .navbutt{
+        font-size: 10px;
+        
+        
+    }
+    nav .bigmenu #bigshop{
+        font-size: 30px;
+        
+    }
+    .arrow p{
+        font-size: 35px;
+        
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    nav .bigmenu .navbutt{
+        font-size: 5px;
+        
+        
+    }
+    nav .bigmenu #bigshop{
+        font-size: 20px;
+        
+    }
+    
+}
+
+
+
+
 
 
 
