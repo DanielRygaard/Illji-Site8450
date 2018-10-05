@@ -14,6 +14,7 @@
     
     
     <button class="arrow"><p>&#8681</p></button>
+    <button class="profileic"></button>
     <!-- NAVIGERING-->
     <nav>
        
@@ -66,9 +67,11 @@
             </button>
             
             
+            
         
         
         </div>
+        
         
         
         
@@ -167,6 +170,7 @@
             if($(".content").scrollTop() >200){
                 $('nav').addClass("down");
                 $(".arrow").addClass("out");
+                $(".profileic").addClass("ot");
                 
             }else{
                 $(".down").removeClass("on");
@@ -175,6 +179,7 @@
                 setTimeout(function() {
                    $(".arrow").removeClass("on");
                }, 300);
+                $(".profileic").removeClass("ot");
                 
                 
             }

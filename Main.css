@@ -35,6 +35,8 @@ body{
 }
 
 /*NAVIGATION*/
+
+/*Big Nav*/
 nav{
     
     width: 100vw;
@@ -80,6 +82,11 @@ nav button#bigshop{
     
     font-size: 50px;
 }
+nav button#bigshop:hover{
+   
+    
+    font-size: 60px;
+}
 nav button#bigshop #bbg{
     position: absolute;
     bottom: 0px;
@@ -91,6 +98,8 @@ nav button#bigshop #bbg{
     
    z-index: -1;
 }
+
+/*Small nav arrow button*/
 button.arrow{
     position: absolute;
     left: -100px;
@@ -130,6 +139,8 @@ button.arrow p{
     
     
 }
+
+/*Smal Nav*/
 nav .menu button{
     display: none;
     visibility: hidden;
@@ -145,6 +156,28 @@ nav .menu .Home{
 nav .menu .Home:hover{
     background-image: url(House%20White2.png);
     background-size: contain;
+    
+}
+button.profileic{
+    width: 5vw;
+    height: 5vw;
+    background-image: url(Profile.png);
+    border: gold 5px solid;
+    background-size: contain;
+    padding: 20px;
+    position: absolute;
+    
+    z-index: 2;
+    right: 5vw;
+    top: -5vw;
+    
+    transition: 0.5s;
+    
+}
+button.profileic:hover{
+    background-image: url(Profilegold2.png);
+    background-color: transparent;
+    border-color: black;
     
 }
 
@@ -194,6 +227,9 @@ button.arrow.out{
     left: 0;
     top: 0;
     
+}
+button.profileic.ot{
+    top: 0vw;
 }
 nav.down .menu{
 
@@ -261,6 +297,7 @@ nav.down .menu #menubg{
     
     
 }
+
 
 /*When arrow is pressed*/
 nav.down.on .menu{
@@ -445,7 +482,7 @@ header{
 /*title*/
 header h1{
     
-    color: white;
+    color: gold;
     
     font-family: roboto-reg;
     z-index: 2;
@@ -479,7 +516,7 @@ header #title h1#prot{
     left: 30px;
     font-size: 80px;
     
-    color: white;
+    color: gold;
     
 }
 header #title h1#prot:before{
@@ -494,6 +531,22 @@ header #title h1#fix{
     top: 100px;
     left: 150px;
     
+}
+
+/* Shop button i header */
+button#shop{
+    color: floralwhite;
+    position: absolute;
+    right: 200px;
+    bottom: 100px;
+    color: gold;
+    border-color: gold;
+    font-size: 30px;
+}
+button#shop:hover{
+       
+     border-color: gold;
+    font-size: 40px;
 }
 
 /*erbjudande vis dian av header*/
@@ -593,21 +646,6 @@ header #erb button#show{
     
     
     
-}
-
-/* Shop button i header */
-button#shop{
-    color: floralwhite;
-    position: absolute;
-    right: 200px;
-    bottom: 100px;
-    
-    border-color: white;
-    
-}
-button#shop:hover{
-   
-     border-color: black;
 }
 
 /* Section Offer */
