@@ -29,7 +29,7 @@
             <button href="" class="navbutt left butt1">Home</button>
             <button href="" class="navbutt butt2">Contact us</button>
             <button id="bigshop"><div id="bbg"></div>SHOP</button>
-            <button href="" class="navbutt butt3">Cart</button>
+             <button href="" class="navbutt butt3">Cart</button>
             <button href="" class="navbutt right butt4">Profile</button>
         </div>
         
@@ -106,14 +106,14 @@
                 <div id="bild"></div>
                 
                 
-                <p></p>
+                
                 <button id="show"> BUY NOW</button>            
             </section>
             
             
             
             
-            <button id="shop">SHOP</button>
+            <button id="shop" class="bil">SHOP</button>
            
         </header>
         
@@ -129,7 +129,7 @@
             
         </section>
         
-        <!-- Section offer number 2>
+        <!-- Section offer number 2-->
         
         
         <section class="off" id="off2">
@@ -146,7 +146,15 @@
         <!-- FOOTER -->
         <footer>
             
-            <button>&#9993;</button>
+            <button class="butt">&#9993;</button>
+            <button class="butt">&#9993;</button>
+            <button class="butt">&#9993;</button>
+            <button class="butt">&#9993;</button>
+            <button class="butt">&#9993;</button>
+            <button class="butt">&#9993;</button>
+           
+            
+            
         </footer>
         
         
@@ -157,17 +165,36 @@
         
             
         $(".content").scroll(function() {
-           if($(".content").scrollTop() + $(".content").height() > 2800) {
+           if($(".content").scrollTop() + $(".content").height() > 2600) {
                $('footer').addClass("add");
            }else if($(".content").scrollTop() + $(".content").height() < 2700){
                $('footer').removeClass("add");
            }
         });
             
+        $(document).ready(function(){
+                
+               if(($(".content").scrollTop() >200) || ($(window).width()<1000) ){
+                   
+                $('nav').addClass("down");
+                $(".arrow").addClass("out");
+                $(".profileic").addClass("ot");
+                
+            }else{
+                $(".down").removeClass("on");
+                $('nav').removeClass("down");
+                $(".arrow").removeClass("out");
+                setTimeout(function() {
+                   $(".arrow").removeClass("on");
+               }, 300);
+                $(".profileic").removeClass("ot");
+               }
+        });
             
         $(".content").scroll(function(){
             
-            if($(".content").scrollTop() >200){
+            if(($(".content").scrollTop() >200) || ($(window).width()<1000) ){
+                
                 $('nav').addClass("down");
                 $(".arrow").addClass("out");
                 $(".profileic").addClass("ot");
@@ -184,8 +211,32 @@
                 
             }
             
-        })
             
+            
+        });
+           
+            
+         $(window).resize(function(){
+                
+               if(($(".content").scrollTop() >200) || ($(window).width()<1000) ){
+                   
+                $('nav').addClass("down");
+                $(".arrow").addClass("out");
+                $(".profileic").addClass("ot");
+                
+            }else{
+                $(".down").removeClass("on");
+                $('nav').removeClass("down");
+                $(".arrow").removeClass("out");
+                setTimeout(function() {
+                   $(".arrow").removeClass("on");
+               }, 300);
+                $(".profileic").removeClass("ot");
+               }
+        });
+            
+            
+         
             
         $(".arrow").click(function(){
            
