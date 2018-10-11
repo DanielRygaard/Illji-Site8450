@@ -35,14 +35,36 @@ body{
 }
 
 /*NAVIGATION*/
-
+/*General*/
+button{
+        width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    
+    border: 4px black solid; 
+    background-color: transparent;
+    font-family: roboto-bold;
+  
+    
+    transition-duration: 0.2s;
+    
+    cursor: pointer;
+}
+button:hover{
+    
+    
+    background-color: black;
+    color: gold;
+   
+    
+}
 /*Big Nav*/
 nav{
     
     width: 100vw;
     height: 4.5vw;
     
-   
+   overflow: visible;
     position: absolute;
     top: 0px;
     z-index: 2;
@@ -99,14 +121,14 @@ nav button#bigshop #bbg{
    z-index: -1;
 }
 
+
 /*Small nav arrow button*/
 button.arrow{
     position: absolute;
-    left: -100px;
-    top: 0;
-    
-    width: 5vw;
-    height: 5vw;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
     
     box-sizing: border-box;
     border: none;
@@ -114,28 +136,49 @@ button.arrow{
     transition: 1s;
     z-index: 2;
     
-    visibility: visible;
-    text-align: center;
-    font-size: 80px;
+
+    
     color: gold;
     
-    transform: rotate(-90deg);
+    
+}
+button.arrow .rec{
+    width: 80%;
+    height: 80%;
+    
+    border: 5px black solid;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10%;
+    transition: 1.5s;
+    font-size: 30px;
+    
 }
 button.arrow:hover{
     color: black;
     background-color: transparent;
 }
-button.arrow p{
+button.arrow:hover .rec{
+   
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
     
-    position: absolute;
-    width: 5vw;
-    height: 5vw;
-    top: -10px;
-    left: 0px;
-    margin: 0;
-    text-align: center;
+}
+@keyframes spin{
     
-    
+    0%{
+        transform: rotate(180deg);
+    }
+    70%{
+        
+    }
+    100%{
+        border-radius: 100px;
+    }
     
     
 }
@@ -146,22 +189,28 @@ nav .menu{
     
     position: absolute;
     top: 12vw;
-    width: 5vw;
-    height: 20vw;
+    width: 120px;
+    height: 500px;
     
     transition: 1s;
     
-    left: -7vw;
+    left: -100px;
     
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
 }
 nav .menu button{
-    display: none;
-    visibility: hidden;
     
-    border: none;
+    background-repeat: no-repeat;
+    border: 2px solid gold;
+    
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    margin: 20px;
+    
+    
     
 }
 nav .menu .Home{
@@ -196,6 +245,9 @@ button.profileic:hover{
     border-color: black;
     
 }
+nav .menu button #bg{
+    display: none;
+}
 
 /* Big Nav Buttons */
 nav .bigmenu{
@@ -208,29 +260,217 @@ nav .bigmenu{
 nav .bigmenu .navbutt{
     position: relative;
     width: 10vw;
-    height: 2.5vw;
+    height: 3vw;
     margin-right: 8.75vw;
     text-align: center;
-    top: 1vw;
+    top: 0.6vw;
     color: black;
-    font-family: roboto-reg;
+    font-family: roboto-bold;
     font-size: 30px;
-    border-color: gold;
-    border-width: 1px;
+    border: none;
     overflow: hidden;
     
+    
 }
-nav .bigmenu .navbutt:hover{
-    color: Gold;
-}
-nav .bigmenu .navbutt.right{
+nav .bigmenu .navbutt.rightb{
     margin-right: 0;
     
     
 }
-nav .bigmenu .navbutt.left{
+nav .bigmenu .navbutt.leftb{
     margin-left: 4vw;
 }
+nav .bigmenu .navbutt p{
+    position: absolute;
+    top: 5px;
+    margin: 0;
+    width: 100%;
+}
+nav .bigmenu button.navbutt:hover{
+    background-color: transparent;
+    color: gold;
+}
+nav .bigmenu .navbutt div.left,nav .bigmenu .navbutt div.right,nav .bigmenu .navbutt div.up,nav .bigmenu .navbutt div.down{
+    position: absolute;
+    background-color: black;
+}
+
+/*Left side*/
+nav .bigmenu .navbutt.lefts div.left{
+    width: 5px;
+    height: 50px;
+    
+  
+    
+    left: 10px;
+    top: 0;
+   
+    
+    transform: skewX(-20deg);
+    
+    
+}
+nav .bigmenu .navbutt.lefts div.right{
+    width: 5px;
+    height: 50px;
+    
+   
+    
+    right: 10px;
+    top: 0;
+  
+    
+    transform: skewX(-20deg);
+    
+    
+}
+nav .bigmenu .navbutt.lefts div.up{
+    width:  130px;
+    height: 5px;
+   
+    top: 0;
+    left: 20px;
+ 
+    transform: skewX(-20deg);
+    
+  
+    
+  
+  
+    
+    
+    
+}
+nav .bigmenu .navbutt.lefts div.down{
+    width:  120px;
+    height: 5px;
+   
+    bottom: 0;
+    left: 10px;
+ 
+    transform: skewX(-20deg);
+    
+  
+    
+   
+   
+    
+    
+}
+
+/*Right side*/
+nav .bigmenu .navbutt.rights div.left{
+    width: 5px;
+    height: 50px;
+    
+    
+    
+    left: 10px;
+    top: 0;
+   
+    transform: skewX(20deg);
+    
+    
+}
+nav .bigmenu .navbutt.rights div.right{
+    width: 5px;
+    height: 50px;
+    
+    
+    
+    right: 10px;
+    top: 0;
+  
+    transform: skewX(20deg);
+    
+    
+}
+nav .bigmenu .navbutt.rights div.up{
+    width:  130px;
+    height: 5px;
+   
+    top: 0;
+    right: 22px;
+ 
+    transform: skewX(20deg);
+    
+   
+    
+    
+    
+}
+nav .bigmenu .navbutt.rights div.down{
+    width:  120px;
+    height: 5px;
+   
+    bottom: 0;
+    right: 7px;
+ 
+    transform: skewX(20deg);
+  
+    
+   
+    
+    
+}
+nav .bigmenu .navbutt.rights p{
+  
+    right:8px;
+}
+
+/*Gold*/
+nav .bigmenu .navbutt div.gold{
+    background-color: gold;
+      transition: 1s;
+    z-index: 22;
+}
+nav .bigmenu .navbutt div.gold.up{
+    width: 0px;
+    
+    
+  
+    
+  
+  
+    
+    
+    
+}
+nav .bigmenu .navbutt div.gold.down{
+    width:  0px;
+    
+  
+   
+   
+   
+    
+    
+}
+
+/*Hover*/
+nav .bigmenu .navbutt:hover div.gold.up{
+    width: 130px;
+    
+    
+  
+    
+  
+    
+    
+    
+}
+nav .bigmenu .navbutt:hover div.gold.down{
+    width:  120px;
+    
+  
+    
+   
+   
+    
+    
+}
+
+
 
 /*Small nav buttons*/
 nav.down{
@@ -239,38 +479,11 @@ nav.down{
     
     
 }
-button.arrow.out{
-    left: 0;
-    top: 0;
-    
-}
 button.profileic.ot{
     top: 0vw;
 }
-
-nav.down .menu button{
-    visibility: visible;
-    display: block;
-    width: 5vw;
-    height: 5vw;
-    font-size: 50px;
-    
-    
-    border-bottom: 1px solid black;
-    
-    
-    
-    
-}
-nav.down .menu button:hover{
-   width: 10vw;
-    
-    
-    
-    
-}
 nav.down .menu button.shopsmall{
-    border-top: solid 1px black;
+    
     background-image: url(shopping%20cart.png);
     background-size: contain;
     
@@ -299,7 +512,7 @@ nav.down .menu #menubg{
 }
 
 
-/*When arrow is pressed*/
+/*When menubutt is pressed*/
 nav.down.on .menu{
   
     transition: 1s;
@@ -308,19 +521,158 @@ nav.down.on .menu{
     
     
 }
-button.arrow.on{
-    transform: rotate(90deg);
+
+/*Menu button*/
+.menubutton{
+    width: 180px;
+    height: 60px;
+    z-index: 21;
+    position: absolute;
+    top: -200px;
+    cursor: pointer;
+    transition: 1s;
+}
+.menubutton.out{
+    top: 20px;
+}
+.menubutton .left,.menubutton .up, .menubutton .right,.menubutton  .down{
+    
+    position: absolute;
+    background-color: gold;
+    z-index: 20;
+    
+    transition: 1s;
+}
+.menubutton .black{
+    background-color: black;
+}
+.menubutton .gold{
+    z-index: 22;
+}
+.menubutton .up{
+    width:  140px;
+    height: 5px;
+   
+    
+    left: 30px;
+  
+    
+    transform: skewX(-20deg);
     
 }
+.menubutton .left{
+    width: 5px;
+    height: 50px;
+    
+    
+    left: 22px;
+    
+    transform: skewX(-20deg);
+    
+    
+    
+}
+.menubutton .right{
+    
+    width: 5px;
+    height: 50px;
+    
+    
+    left: 22px;
+    transform: skewX(-20deg);
+    
+}
+.menubutton .down{
+    width: 140px;
+    height: 5px;
+    
+    top: 50px;
+    left: 12px;
+    
+    transform: skewX(-25deg);
+}
+.menubutton .up.gold{
+    width:0;
+}
+.menubutton .down.gold{
+    width:0;
+}
+
+
+/* When hovering the menu button*/
+.menubutton:hover .down.gold{
+    width: 142px;
+    
+}
+.menubutton:hover .up.gold{
+    width: 140px;
+   
+}
+.menubutton:hover .right.gold, .menubutton:hover .left.gold{
+    height: 50px;
+   
+}
+.menubutton h3{
+    position: absolute;
+    left: 50px;
+    top: -20px;
+    font-size: 30px;
+    font-family: roboto-bold;
+    transition: 0.5s;
+}
+.menubutton:hover h3{
+    color: gold;
+}
+
+/*When scrolled down 200px*/
+.menubutton.on .down.gold{
+    width: 0px;
+    
+}
+.menubutton.on .up.gold{
+    width: 140px;
+   
+}
+.menubutton.on .left.gold{
+    height: 50px;
+   
+}
+.menubutton.on .left{
+    width: 138px;
+}
+.menubutton.on .right{
+    left: 160px;
+}
+.menubutton.on h3{
+    color: black;
+    z-index: 25;
+}
+
+/*When ou adn back*/
+
+.menubutton.on:hover .down.gold{
+    width: 0px;
+    
+}
+.menubutton.on:hover .up.gold{
+    width: 0px;
+   
+}
+.menubutton.on:hover .right.gold{
+    height: 0px;
+   
+}
+
+
 
 /* Small nav out */
-.out{
+.out2{
     width: 200px;
     height: 5vw;
     
     
     position: absolute;
-    transition: 1s;
+    transition: 0.5s;
     left: -200px;
     
   
@@ -328,19 +680,19 @@ button.arrow.on{
     z-index: -2;
     
 }
-.out#homeout{
-    top: 0;
+.out2#homeout{
+    top: calc(100%*(0/4));
 }
-.out#shopout{
-    top: 5vw;
+.out2#shopout{
+    top: calc(100%*(1/4));
 }
-.out#lagerout{
-    top: 10vw;
+.out2#lagerout{
+    top: calc(100%*(2/4));
 }
-.out#profileout{
-    top: 15vw;
+.out2#profileout{
+    top: calc(100%*(3/4));
 }
-.out p{
+.out2 p{
     position: absolute;
     top: -40px;
     width: 100%;
@@ -351,27 +703,27 @@ button.arrow.on{
     
 }
 
-.menu .Home:hover .out#homeout{
-    top: 0;
-    left: 5vw;
+.menu .Home:hover .out2#homeout{
+    top: calc(100%*(0/4));
+    left: 100%;
   
     
 }
-.menu .shopsmall:hover .out#shopout{
-    top: 5vw;
-    left: 5vw;
+.menu .shopsmall:hover .out2#shopout{
+    top: calc(100%*(1/4));
+    left: 100%;
   
     
 }
-.menu .lager:hover .out#lagerout{
-    top: 10vw;
-    left: 5vw;
+.menu .lager:hover .out2#lagerout{
+    top: calc(100%*(2/4));
+   left: 100%;
   
     
 }
-.menu .profile:hover .out#profileout{
-    top: 15vw;
-    left: 5vw;
+.menu .profile:hover .out2#profileout{
+    top: calc(100%*(3/4));
+    left: 100%;
   
     
 }
@@ -440,29 +792,7 @@ content, content:before{
     
 }    
 
-/*General*/
-button{
-        width: 200px;
-    height: 100px;
-    box-sizing: border-box;
-    
-    border: 4px black solid; 
-    background-color: transparent;
-    font-family: roboto-bold;
-  
-    
-    transition-duration: 0.2s;
-    
-    cursor: pointer;
-}
-button:hover{
-    
-    
-    background-color: black;
-    color: gold;
-   
-    
-}
+
 
 /*HEADER*/
 header{
@@ -784,7 +1114,7 @@ footer.add{
         
     }
     
-    .arrow p{
+    .arrow p{    
         font-size: 90px;
         text-align: center;
         
@@ -796,8 +1126,7 @@ footer.add{
      nav .bigmenu #bigshop:hover{
         font-size: 50px;
     }
-    
-    
+   
     
     
     
@@ -813,14 +1142,80 @@ footer.add{
         
     }
     
-    button.arrow p{
-        
-        font-size: 100px;
-        
-    }
     button.arrow.out{
+        position: relative;
+        left: 30px;
         top: 20px;
     }
+    button.arrow p{
+        font-size: 100px;
+        left: -15px;
+        top: -50px;
+    }
+    
+    nav div.menu{
+        width: 360px;
+        height: 400px;
+        top: 140px;
+        left: -360px;
+        flex-flow: column;    
+    }
+    
+    
+    nav.down .menu button{
+    
+    font-size: 50px;
+    
+    width: 300px;
+   
+    height: 100px;
+    
+    
+    text-align: left;
+    
+    }
+    nav.down .menu button #bg{
+        border: 1px gold solid;
+        display: block;
+        
+    }
+    nav.down .menu button p{
+        width: 350px;
+        font-size: 40px;
+        top: -10px;
+    }
+    nav.down .menu button div.out2{
+        left: 80px;
+        z-index: 2;
+        text-align: left;
+    }
+    
+    .menu .Home:hover .out2#homeout{
+     
+    left: 100px;
+  
+    
+    }
+    .menu .shopsmall:hover .out2#shopout{
+         
+        left: 100px;
+
+
+    }
+    .menu .lager:hover .out2#lagerout{
+         
+       left: 100px;
+
+
+    }
+    .menu .profile:hover .out2#profileout{
+         
+        left: 100px;
+
+
+    }
+    
+    
   
     
 }
@@ -834,10 +1229,8 @@ footer.add{
         font-size: 30px;
         
     }
-    button.arrow p{
-        font-size: 100px;
-        
-    }
+    
+    
     
 }
 @media only screen and (max-width: 600px) {
@@ -854,14 +1247,6 @@ footer.add{
 }
 
 /*Set new nav for mobile screens*/
-@media only screen and (max-width: 500px) {
-    
-    body{
-        display: none;
-    }
-    
-}
-
 
 /*Header*/
 @media only screen and (max-width: 1400px){
@@ -963,7 +1348,6 @@ footer.add{
     
     
 }
-
 @media only screen and (max-width: 700px) {
     header #title{
         
@@ -974,6 +1358,24 @@ footer.add{
     
     
 }
+
+@media only screen and (max-width: 500px) {
+    
+    header{
+        left: 0;
+        width: 100vw;
+    }
+    header div#title{
+        left: 5px;
+    }
+    section.off{
+        left: 0;
+        width: 100vw;
+    }
+    
+    
+}
+
 /*Section*/
 @media only screen and (max-width: 1400px){
     
@@ -1020,6 +1422,7 @@ footer.add{
     
     
 }
+
 /*Footer*/ 
 @media only screen and (max-width: 1000px) {
    

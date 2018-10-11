@@ -13,7 +13,20 @@
     
     
     
-    <button class="arrow"><p>&#8681</p></button>
+   
+    <div class="menubutton">
+        <h3>Menu</h3>
+        <div class="up gold"></div>
+        <div class="down gold"></div>
+        <div class="left gold"></div>
+        
+        <div class="up black"></div>
+        <div class="down black"></div>
+        <div class="left black"></div>
+        <div class="right black"></div>
+    </div>
+    
+    
     <button class="profileic"></button>
     <!-- NAVIGERING-->
     <nav>
@@ -26,11 +39,60 @@
         
         <div class="bigmenu">
            
-            <button href="" class="navbutt left butt1">Home</button>
-            <button href="" class="navbutt butt2">Contact us</button>
+            <button href="" class="navbutt leftb butt1 lefts">
+                
+                <p>Home</p>
+                <div class="up gold"></div>
+                <div class="down gold"></div>
+                <div class="left gold"></div>
+                
+                <div class="up black"></div>
+                <div class="down black"></div>
+                <div class="left black"></div>
+                
+            </button>
+            <button href="" class="navbutt butt2 lefts">
+                 <p>Shop</p>
+                <div class="up gold"></div>
+                <div class="down gold"></div>
+                <div class="left gold"></div>
+                
+                <div class="up black"></div>
+                <div class="down black"></div>
+                <div class="left black"></div>
+                
+            </button>
             <button id="bigshop"><div id="bbg"></div>SHOP</button>
-             <button href="" class="navbutt butt3">Cart</button>
-            <button href="" class="navbutt right butt4">Profile</button>
+            <button href="" class="navbutt butt3 rights">
+                 <p>Cart</p>
+                <div class="up gold"></div>
+                <div class="down gold"></div>
+                
+                <div class="right gold"></div>
+                <div class="up black"></div>
+                <div class="down black"></div>
+              
+                <div class="right black"></div>
+            </button>
+            <button href="" class="navbutt rightb butt4 rights">
+                 <p>Contact</p>
+                <div class="up gold"></div>
+                <div class="down gold"></div>
+               
+                <div class="right gold"></div>
+                <div class="up black"></div>
+                <div class="down black"></div>
+                
+                <div class="right black"></div>
+            </button>
+            
+
+           <div class="rights dec"></div>
+       
+            <div class="rights decu"></div>
+            <div class="lefts decu"></div>
+            <div class="lefts dec"></div>
+       
         </div>
         
         
@@ -42,26 +104,28 @@
        
         
         <!-- Small Nav -->
-        <div class="menu"><div id="menubg"></div>
+        <div class="menu">
         
             <button class="Home">
-                <div class="out" id="homeout">
+               <div id="bg"></div>
+                <div class="out2" id="homeout">
+                   
                     <p>Home</p>
                 </div>
             </button>
             
             <button class="shopsmall">
-                <div class="out" id="shopout">
+                <div class="out2" id="shopout">
                     <p>Cart</p>
                 </div>
             </button>
             
             <button class="lager">&#9744;
-                <div class="out" id="lagerout"><p>Store</p>
+                <div class="out2" id="lagerout"><p>Store</p>
             </div></button>
             
             <button class="profile">&#9993;
-                <div class="out" id="profileout">
+                <div class="out2" id="profileout">
                     <p>Contact Us</p>
                 </div>
             </button>
@@ -177,15 +241,15 @@
                if(($(".content").scrollTop() >200) || ($(window).width()<1000) ){
                    
                 $('nav').addClass("down");
-                $(".arrow").addClass("out");
+                $(".menubutton").addClass("out");
                 $(".profileic").addClass("ot");
                 
             }else{
                 $(".down").removeClass("on");
                 $('nav').removeClass("down");
-                $(".arrow").removeClass("out");
+                $(".menubutton").removeClass("out");
                 setTimeout(function() {
-                   $(".arrow").removeClass("on");
+                   $(".menubutton").removeClass("on");
                }, 300);
                 $(".profileic").removeClass("ot");
                }
@@ -196,15 +260,15 @@
             if(($(".content").scrollTop() >200) || ($(window).width()<1000) ){
                 
                 $('nav').addClass("down");
-                $(".arrow").addClass("out");
+                $(".menubutton").addClass("out");
                 $(".profileic").addClass("ot");
                 
             }else{
                 $(".down").removeClass("on");
                 $('nav').removeClass("down");
-                $(".arrow").removeClass("out");
+                $(".menubutton").removeClass("out");
                 setTimeout(function() {
-                   $(".arrow").removeClass("on");
+                   $(".menubutton").removeClass("on");
                }, 300);
                 $(".profileic").removeClass("ot");
                 
@@ -221,13 +285,13 @@
                if(($(".content").scrollTop() >200) || ($(window).width()<1000) ){
                    
                 $('nav').addClass("down");
-                $(".arrow").addClass("out");
+                $(".menubutton").addClass("out");
                 $(".profileic").addClass("ot");
                 
             }else{
                 $(".down").removeClass("on");
                 $('nav').removeClass("down");
-                $(".arrow").removeClass("out");
+                $(".menubutton").removeClass("out");
                 setTimeout(function() {
                    $(".arrow").removeClass("on");
                }, 300);
@@ -238,15 +302,15 @@
             
          
             
-        $(".arrow").click(function(){
+        $(".menubutton").click(function(){
            
             if(!$(".down").hasClass("on")){
             $(".down").addClass("on");
-            $(".arrow").addClass("on");
+            $(".menubutton").addClass("on");
             }
             else{
                 $(".down").removeClass("on");
-                $(".arrow").removeClass("on");
+                $(".menubutton").removeClass("on");
             }
             
             
