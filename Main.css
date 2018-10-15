@@ -194,7 +194,7 @@ nav .menu{
     
     transition: 1s;
     
-    left: -100px;
+    left: -120px;
     
     display: flex;
     flex-wrap: wrap;
@@ -295,34 +295,22 @@ nav .bigmenu .navbutt div.left,nav .bigmenu .navbutt div.right,nav .bigmenu .nav
     background-color: black;
 }
 
-/*Left side*/
+/*Left side buttons*/
 nav .bigmenu .navbutt.lefts div.left{
     width: 5px;
     height: 50px;
     
-  
-    
     left: 10px;
     top: 0;
-   
-    
     transform: skewX(-20deg);
-    
-    
 }
 nav .bigmenu .navbutt.lefts div.right{
     width: 5px;
     height: 50px;
     
-   
-    
     right: 10px;
     top: 0;
-  
-    
     transform: skewX(-20deg);
-    
-    
 }
 nav .bigmenu .navbutt.lefts div.up{
     width:  130px;
@@ -330,16 +318,7 @@ nav .bigmenu .navbutt.lefts div.up{
    
     top: 0;
     left: 20px;
- 
     transform: skewX(-20deg);
-    
-  
-    
-  
-  
-    
-    
-    
 }
 nav .bigmenu .navbutt.lefts div.down{
     width:  120px;
@@ -349,41 +328,24 @@ nav .bigmenu .navbutt.lefts div.down{
     left: 10px;
  
     transform: skewX(-20deg);
-    
-  
-    
-   
-   
-    
-    
 }
 
-/*Right side*/
+/*Right side buttons*/
 nav .bigmenu .navbutt.rights div.left{
     width: 5px;
     height: 50px;
     
-    
-    
     left: 10px;
     top: 0;
-   
     transform: skewX(20deg);
-    
-    
 }
 nav .bigmenu .navbutt.rights div.right{
     width: 5px;
     height: 50px;
-    
-    
-    
+
     right: 10px;
-    top: 0;
-  
+    top: 0;  
     transform: skewX(20deg);
-    
-    
 }
 nav .bigmenu .navbutt.rights div.up{
     width:  130px;
@@ -391,13 +353,7 @@ nav .bigmenu .navbutt.rights div.up{
    
     top: 0;
     right: 22px;
- 
     transform: skewX(20deg);
-    
-   
-    
-    
-    
 }
 nav .bigmenu .navbutt.rights div.down{
     width:  120px;
@@ -405,16 +361,9 @@ nav .bigmenu .navbutt.rights div.down{
    
     bottom: 0;
     right: 7px;
- 
     transform: skewX(20deg);
-  
-    
-   
-    
-    
 }
 nav .bigmenu .navbutt.rights p{
-  
     right:8px;
 }
 
@@ -553,34 +502,22 @@ nav.down.on .menu{
     width:  140px;
     height: 5px;
    
-    
     left: 30px;
-  
-    
     transform: skewX(-20deg);
-    
 }
 .menubutton .left{
     width: 5px;
     height: 50px;
-    
-    
-    left: 22px;
-    
+
+    left: 22px;    
     transform: skewX(-20deg);
-    
-    
-    
 }
 .menubutton .right{
-    
     width: 5px;
     height: 50px;
     
-    
     left: 22px;
     transform: skewX(-20deg);
-    
 }
 .menubutton .down{
     width: 140px;
@@ -588,7 +525,6 @@ nav.down.on .menu{
     
     top: 50px;
     left: 12px;
-    
     transform: skewX(-25deg);
 }
 .menubutton .up.gold{
@@ -624,7 +560,7 @@ nav.down.on .menu{
     color: gold;
 }
 
-/*When scrolled down 200px*/
+/*When button clicked*/
 .menubutton.on .down.gold{
     width: 0px;
     
@@ -1133,26 +1069,11 @@ footer.add{
 }
 @media only screen and (max-width: 1000px) {
     nav .bigmenu .navbutt{
-        font-size: 15px;
-        
-        
+        font-size: 15px; 
     }
     nav .bigmenu #bigshop{
-        font-size: 40px;
-        
+        font-size: 40px; 
     }
-    
-    button.arrow.out{
-        position: relative;
-        left: 30px;
-        top: 20px;
-    }
-    button.arrow p{
-        font-size: 100px;
-        left: -15px;
-        top: -50px;
-    }
-    
     nav div.menu{
         width: 360px;
         height: 400px;
@@ -1160,24 +1081,17 @@ footer.add{
         left: -360px;
         flex-flow: column;    
     }
-    
-    
     nav.down .menu button{
-    
     font-size: 50px;
     
     width: 300px;
-   
     height: 100px;
-    
-    
+        
     text-align: left;
-    
     }
     nav.down .menu button #bg{
         border: 1px gold solid;
-        display: block;
-        
+        display: block; 
     }
     nav.down .menu button p{
         width: 350px;
@@ -1191,33 +1105,23 @@ footer.add{
     }
     
     .menu .Home:hover .out2#homeout{
-     
-    left: 100px;
-  
-    
+        left: 100px;
     }
     .menu .shopsmall:hover .out2#shopout{
-         
         left: 100px;
-
-
     }
     .menu .lager:hover .out2#lagerout{
-         
        left: 100px;
-
-
     }
     .menu .profile:hover .out2#profileout{
-         
         left: 100px;
-
-
     }
-    
-    
-  
-    
+    .menubutton .gold.up, .menubutton .gold.down{
+        width: 140px;
+    }
+    .menubutton h3{
+        color: gold;
+    }
 }
 @media only screen and (max-width: 800px) {
     nav .bigmenu .navbutt{
@@ -1242,6 +1146,40 @@ footer.add{
     nav .bigmenu #bigshop{
         font-size: 20px;
         
+    }
+    
+    
+}
+@media only screen and (max-height: 500px) {
+    nav.dowm{
+        position: absolute;
+        
+    }
+    nav.down div.menu{
+        
+       position: absolute;
+        height: 380px;
+        width: 650px;
+        z-index: 52;
+        
+        left: auto;
+        right: 100px;
+        top: -400px;
+        margin: 0;
+        padding: 0;
+        
+    }
+   
+    nav div.menu button{
+        width: 80vw;
+    }
+    nav.down.on div.menu{
+        left: auto;
+        right: 100px;
+        top: 100px;
+    }
+    nav.down.on .menu button div.out2 p{
+        top: -15px;
     }
     
 }
@@ -1359,23 +1297,6 @@ footer.add{
     
 }
 
-@media only screen and (max-width: 500px) {
-    
-    header{
-        left: 0;
-        width: 100vw;
-    }
-    header div#title{
-        left: 5px;
-    }
-    section.off{
-        left: 0;
-        width: 100vw;
-    }
-    
-    
-}
-
 /*Section*/
 @media only screen and (max-width: 1400px){
     
@@ -1434,7 +1355,22 @@ footer.add{
 
 }
 
-
+@media only screen and (max-width: 600px) {
+    
+    header{
+        left: 0;
+        width: 100vw;
+    }
+    header div#title{
+        left: 5px;
+    }
+    section#off{
+        left: 100px;
+        width: 100vw;
+    }
+    
+    
+}
 
 
 
