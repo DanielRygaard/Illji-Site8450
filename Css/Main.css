@@ -9,22 +9,30 @@ html{
     margin: 0;
     padding: 0;
 }
-
+#content{
+    width: 100vw;
+    height: 100vh;
+    
+    max-width: 100vw;
+    
+    
+    
+}
 @font-face{
     font-family: roboto-reg;
-    src: url(/Fonts/Roboto-Regular.ttf);
+    src: url(../Fonts/Roboto-Regular.ttf);
 }
 @font-face{
     font-family: roboto-med;
-    src: url(/Fonts/Roboto-Medium.ttf);
+    src: url(../Fonts/Roboto-Medium.ttf);
 }
 @font-face{
     font-family: roboto-bold;
-    src: url(/Fonts/Roboto-Bold.ttf);
+    src: url(../Fonts/Roboto-Bold.ttf);
 }
 @font-face{
     font-family: roboto-black;
-    src: url(/Fonts/Roboto-Black.ttf);
+    src: url(../Fonts/Roboto-Black.ttf);
 }
 
 body{
@@ -58,7 +66,12 @@ button:hover{
    
     
 }
-/*Big Nav*/
+
+
+
+
+
+/* Big Nav Buttons */
 nav{
     
     width: 100vw;
@@ -84,7 +97,7 @@ nav #bg{
     height: 100%;
     position: absolute;
     background-color: #4f4f4f;
-    opacity: 0.8;
+    opacity: 0.3;
     
     
     
@@ -96,20 +109,20 @@ nav #bg{
     
     
 }
-nav button#bigshop{
+nav .bigmenu button#bigshop{
     position: relative;
     width: 15vw;
     height: 6vw;
     margin-right: 11.25vw;
-    
+    color: gold;
     font-size: 50px;
 }
-nav button#bigshop:hover{
+nav .bigmenu button#bigshop:hover{
    
     
     font-size: 60px;
 }
-nav button#bigshop #bbg{
+nav .bigmenu button#bigshop #bbg{
     position: absolute;
     bottom: 0px;
     left: 0px;    
@@ -120,136 +133,6 @@ nav button#bigshop #bbg{
     
    z-index: -1;
 }
-
-
-/*Small nav arrow button*/
-button.arrow{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    margin: 0;
-    padding: 0;
-    
-    box-sizing: border-box;
-    border: none;
-    
-    transition: 1s;
-    z-index: 2;
-    
-
-    
-    color: gold;
-    
-    
-}
-button.arrow .rec{
-    width: 80%;
-    height: 80%;
-    
-    border: 5px black solid;
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 10%;
-    transition: 1.5s;
-    font-size: 30px;
-    
-}
-button.arrow:hover{
-    color: black;
-    background-color: transparent;
-}
-button.arrow:hover .rec{
-   
-    animation-name: spin;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-    
-}
-@keyframes spin{
-    
-    0%{
-        transform: rotate(180deg);
-    }
-    70%{
-        
-    }
-    100%{
-        border-radius: 100px;
-    }
-    
-    
-}
-
-/*Smal Nav*/
-nav .menu{
-     
-    
-    position: absolute;
-    top: 12vw;
-    width: 120px;
-    height: 500px;
-    
-    transition: 1s;
-    
-    left: -120px;
-    
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-nav .menu button{
-    
-    background-repeat: no-repeat;
-    border: 2px solid gold;
-    
-    width: 80px;
-    height: 80px;
-    font-size: 50px;
-    margin: 20px;
-    
-    
-    
-}
-nav .menu .Home{
-    background-image: url(House%20Black2.png);
-    background-size: contain;
-    
-}
-nav .menu .Home:hover{
-    background-image: url(House%20White2.png);
-    background-size: contain;
-    
-}
-button.profileic{
-    width: 5vw;
-    height: 5vw;
-    background-image: url(Profile.png);
-    border: gold 5px solid;
-    background-size: contain;
-    padding: 20px;
-    position: absolute;
-    
-    z-index: 2;
-    right: 5vw;
-    top: -10vw;
-    
-    transition: 0.5s;
-    
-}
-button.profileic:hover{
-    background-image: url(Profilegold2.png);
-    background-color: transparent;
-    border-color: black;
-    
-}
-nav .menu button #bg{
-    display: none;
-}
-
-/* Big Nav Buttons */
 nav .bigmenu{
     width: 100%;
     height: 100%;
@@ -259,8 +142,8 @@ nav .bigmenu{
 }
 nav .bigmenu .navbutt{
     position: relative;
-    width: 10vw;
-    height: 3vw;
+    width:10vw;
+    height: 2.65vw;
     margin-right: 8.75vw;
     text-align: center;
     top: 0.6vw;
@@ -268,7 +151,7 @@ nav .bigmenu .navbutt{
     font-family: roboto-bold;
     font-size: 30px;
     border: none;
-    overflow: hidden;
+    overflow: visible;
     
     
 }
@@ -285,6 +168,7 @@ nav .bigmenu .navbutt p{
     top: 5px;
     margin: 0;
     width: 100%;
+    color: white;
 }
 nav .bigmenu button.navbutt:hover{
     background-color: transparent;
@@ -298,9 +182,9 @@ nav .bigmenu .navbutt div.left,nav .bigmenu .navbutt div.right,nav .bigmenu .nav
 /*Left side buttons*/
 nav .bigmenu .navbutt.lefts div.left{
     width: 5px;
-    height: 50px;
+    height: 2.65vw;
     
-    left: 10px;
+    left: 0vw;
     top: 0;
     transform: skewX(-20deg);
 }
@@ -313,27 +197,31 @@ nav .bigmenu .navbutt.lefts div.right{
     transform: skewX(-20deg);
 }
 nav .bigmenu .navbutt.lefts div.up{
-    width:  130px;
+    width:  6vw;
     height: 5px;
    
     top: 0;
-    left: 20px;
+    left: 0.5vw;
     transform: skewX(-20deg);
 }
 nav .bigmenu .navbutt.lefts div.down{
-    width:  120px;
+    width:  6vw;
     height: 5px;
    
-    bottom: 0;
-    left: 10px;
+    bottom:0;
+    left:-0.2vw;
  
     transform: skewX(-20deg);
+}
+nav .bigmenu .navbutt.lefts p{
+    left: -1.5vw;
+    top: 10%;
 }
 
 /*Right side buttons*/
 nav .bigmenu .navbutt.rights div.left{
     width: 5px;
-    height: 50px;
+    height: 2.65vw;
     
     left: 10px;
     top: 0;
@@ -341,22 +229,22 @@ nav .bigmenu .navbutt.rights div.left{
 }
 nav .bigmenu .navbutt.rights div.right{
     width: 5px;
-    height: 50px;
+    height: 2.65vw;
 
     right: 10px;
     top: 0;  
     transform: skewX(20deg);
 }
 nav .bigmenu .navbutt.rights div.up{
-    width:  130px;
+    width:  6vw;
     height: 5px;
    
     top: 0;
-    right: 22px;
+    right: 01.5vw;
     transform: skewX(20deg);
 }
 nav .bigmenu .navbutt.rights div.down{
-    width:  120px;
+    width:  6vw;
     height: 5px;
    
     bottom: 0;
@@ -364,7 +252,8 @@ nav .bigmenu .navbutt.rights div.down{
     transform: skewX(20deg);
 }
 nav .bigmenu .navbutt.rights p{
-    right:8px;
+    right: -1vw;
+    top: 10%;
 }
 
 /*Gold*/
@@ -398,7 +287,7 @@ nav .bigmenu .navbutt div.gold.down{
 
 /*Hover*/
 nav .bigmenu .navbutt:hover div.gold.up{
-    width: 130px;
+    width: 6vw;
     
     
   
@@ -409,7 +298,7 @@ nav .bigmenu .navbutt:hover div.gold.up{
     
 }
 nav .bigmenu .navbutt:hover div.gold.down{
-    width:  120px;
+    width:  6vw;
     
   
     
@@ -419,7 +308,64 @@ nav .bigmenu .navbutt:hover div.gold.down{
     
 }
 
+/*SMALLLNAV*/
 
+nav .menu{
+     
+    
+    position: absolute;
+    top: 12vw;
+    width: 120px;
+    height: 500px;
+    
+    transition: 1s;
+    
+    left: -120px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+nav .menu button{
+    
+    background-repeat: no-repeat;
+    border: 2px solid gold;
+    
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    margin: 20px;
+    
+    
+    
+}
+
+button.profileic{
+    width: 5vw;
+    height: 5vw;
+    background-image: url(Profile.png);
+    border: gold 5px solid;
+    background-size: contain;
+    padding: 20px;
+    position: absolute;
+    
+    z-index: 2;
+    right: 5vw;
+    top: -10vw;
+    
+    transition: 0.5s;
+    
+}
+button.profileic:hover{
+    background-image: url(Profilegold2.png);
+    background-color: transparent;
+    border-color: black;
+    
+}
+nav .menu button #bg{
+    border-radius: 10px;
+    
+}
 
 /*Small nav buttons*/
 nav.down{
@@ -433,7 +379,7 @@ button.profileic.ot{
 }
 nav.down .menu button.shopsmall{
     
-    background-image: url(shopping%20cart.png);
+    background-image: url(../Bilder/Nav/shopping%20cart.png);
     background-size: contain;
     
     
@@ -441,9 +387,20 @@ nav.down .menu button.shopsmall{
 }
 nav.down .menu button.shopsmall:hover{
     
-    background-image: url(Shopping%20cart%20white.png);
+    background-image: url(../Bilder/Nav/Shopping%20cart%20white.png);
     
 }
+nav .menu button.Home{
+    background-image: url(../Bilder/Nav/House%20Black2.png);
+    background-size: contain;
+    
+}
+nav .menu button.Home:hover{
+    background-image: url(../Bilder/Nav/House%20White2.png);
+    background-size: contain;
+    
+}
+
 nav.down .menu #menubg{
     
     
@@ -480,6 +437,9 @@ nav.down.on .menu{
     top: -200px;
     cursor: pointer;
     transition: 1s;
+}
+.menubutton h3{
+    color: white;
 }
 .menubutton.out{
     top: 20px;
@@ -717,7 +677,7 @@ content, content:before{
     
     
     
-    background-image: url(Headerpic%20blurr%20one.png);
+    background-image: url(../Bilder/Parallax/Bakbild2.png);
     background-size: cover;
     
     
@@ -737,7 +697,7 @@ header{
     
     border-radius: 20px;
 
-    background-image: url(Headerpic.jpg);
+    background-image: url(../Bilder/Header/Headerpic.jpg);
     background-size: cover;
     position:absolute;
 
@@ -841,7 +801,7 @@ header #erb #secbg{
     
 }
 header #erb div#bild{
-    background-image: url(Protein.png);
+    background-image: url(../Bilder/Header/Protein.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
@@ -914,6 +874,8 @@ header #erb button#show{
     
 }
 
+/*SECTIONS*/
+
 /* Section Offer */
 section.off button{
     
@@ -925,7 +887,7 @@ section.off button{
 .off{
     
     width: 90vw;
-    margin-top: 10vw;
+    margin-top: 1vw;
     left: 5vw;
     height: 400px;
     
@@ -936,12 +898,12 @@ section.off button{
     background-color: red;
     border-radius: 10px;
     
-    background-image: url(Headerpic.jpg);
+    background-image: url(../Bilder/Section/bak.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 #off{
-    top: 1000px;
+    top: 90vw;
 }
 .off #offbild{
     height: 80%;
@@ -949,7 +911,7 @@ section.off button{
     top: 60px;
     position: absolute;
     
-    background-image: url(Gainer.png);
+    background-image: url(../Bilder/Section/Gainer.png);
     background-size: contain;
     background-repeat: no-repeat;
     
@@ -965,6 +927,7 @@ section.off button{
     height: 100%;
     background-color: gray;
     opacity: 0.5;
+    border-radius: 10px;
     
 }
 .off #offtitle{
@@ -988,16 +951,224 @@ section.off button{
     content: "Sale";
     color: gold;
 }
+#off p::before{
+    color: white;
+    content: "Kolla in vårat superbra erbjudande från Leagion";
+}
+#off p{
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    text-align: center;
+    border-radius: 10px;
     
+    font-family: roboto-bold;
+    font-size: 30px;
+    left: 650px;
+    top: 60px;
+    
+    color: gold;
+    background-color: rgba(0,0,0,0.6);
+    content: "40%";
+    border: gold 2px solid;
+    
+    
+}
+
 /* Section offer number 2*/
 #off2{
     
     
     
-    top: 1800px;
-    
+    top: 60vw;
+   
    
 }
+#off2 #offbild{
+    height: 100%;
+    width: 400px;
+    left: 60px;
+    top: 100px;
+    background-image: url(../Bilder/Section/Powders.png);
+}
+#off2 #offtitle{
+    left: 500px;
+    top: 20px;
+    color: gold;
+    font-size: 60px;
+}
+#off2 p{
+    position: absolute;
+    width: 350px;
+    font-family: roboto-bold;
+    left: 500px;
+    top: 140px;
+    font-size: 20px;
+    color:white;
+}
+#off2 p:after{
+    color: gold;
+    content: " Gratis!"
+        
+}
+#off2 div#pbg{
+    width: 450px;
+    height: 260px;
+    background-color: rgba(0,0,0,0.6);
+    position: relative;
+    left: 450px;
+    top: 50px;
+    border-radius: 10px;
+    
+    border:gold 2px solid;
+    
+}
+
+section#items{
+    width: 90vw;
+    left: 5vw;
+    height: 1100px;
+   
+    
+    position: relative;
+    top: 115vw;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section#items div.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: grey;
+    opacity: 0.7;
+    z-index: 0;
+    border-radius: 10px;
+    
+}
+section#items div.item{
+    width: 28%;
+    margin-left: 4%;
+    margin-top: 1%;
+    height: 45%;
+    position: relative;
+    background-image: url(Bakbild3.png);
+    background-size: cover;
+    border-radius: 10px;
+    
+    border: solid black 1px;
+   
+}
+
+section#items div.item div#itembild{
+    width: 60%;
+    top: 0px;
+    height: 250px;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 20%;
+    
+}
+
+section#items div#item1 div#itembild{
+    
+    background-image: url(../Bilder/Items/CASEIN.png);
+}
+section#items div#item2 div#itembild{
+    background-image: url(../Bilder/Items/100%25%20Whey.png);
+}
+section#items div#item3 div#itembild{
+    background-image: url(../Bilder/Items/Protein.png);
+}
+section#items div#item4 div#itembild{
+    background-image: url(../Bilder/Items/Bcaa.png);
+}
+section#items div#item5 div#itembild{
+     background-image: url(../Bilder/Items/AEE.png);   
+}
+section#items div#item6 div#itembild{
+    background-image: url(../Bilder/Items/PWO.png);
+}
+
+
+section#items div.item h2{
+    position: relative;
+    font-size: 30px;
+    font-family: roboto-bold;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+section#items div.item h3{
+    position: relative;
+    width: 100%;
+    top: -30px;
+    font-size: 15px;
+    text-align: center;
+    color: lightgrey;
+}
+section#items div.item p{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: -40px;
+    font-size: 20px;
+    font-family: roboto-bold;
+}
+section#items div.item button{
+    position: relative;
+    left: 30%;
+    width: 40%;
+    
+    bottom: 50px;
+    border-color: gold;
+    font-size: 40px;
+    
+}
+section#items div.item button p#norm{
+    position: absolute;
+    font-size: 40px;
+    top: -20px;
+    transition: 0s;
+    color: gold;
+    width: 100%;
+    height: 100%;
+    
+}
+section#items div.item button:hover p#norm{
+    opacity: 0;
+    
+}
+
+
+section#items div.item button p#norm::after{
+    content: ":-";
+    
+}
+
+section#items div.item button p#hov{
+    position: absolute;
+    font-size: 40px;
+    top: -20px;
+    left: 0;
+    text-align: center;
+    transition: 0s;
+    color: gold;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    opacity: 0;
+    
+}
+
+section#items div.item button:hover p#hov{
+    
+    opacity: 1;
+}
+
 
 
 /* FOOTER */
@@ -1008,7 +1179,7 @@ footer{
     box-sizing: border-box;
     
     position: absolute;
-    top: 2700px;
+    top: 180vw;
     
     border: transparent solid 5px;
     transition: 1s;
@@ -1024,15 +1195,22 @@ footer button.butt{
 footer.add button{
     color:gold;
     border-color: gold;
+    font-size: 40px;
 }
 footer button:hover{
     color: black;
     background-color: gold;
     content:"Kontakt us";
 }
-
 footer.add{
     border-color: gold;
+}
+footer .logo{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    background-color: beige;
+    left:37%;
 }
 
 
@@ -1062,7 +1240,10 @@ footer.add{
      nav .bigmenu #bigshop:hover{
         font-size: 50px;
     }
-   
+   nav .bigmenu .navbutt.rights p{
+    right: -0vw;
+    top: 10%;
+}
     
     
     
@@ -1075,52 +1256,103 @@ footer.add{
         font-size: 40px; 
     }
     nav div.menu{
-        width: 360px;
-        height: 400px;
+        width: 100%;
+        height: 1000px;
         top: 140px;
         left: -360px;
-        flex-flow: column;    
+        flex-flow: column;  
+        
+        background-color: rgba();
     }
     nav.down .menu button{
     font-size: 50px;
+    position: relative;
+    width: 80%;
+    height: 200px;
+    left: 10%;
     
-    width: 300px;
-    height: 100px;
-        
-    text-align: left;
+    }
+    nav.down .menu{
+        left: -100%;
     }
     nav.down .menu button #bg{
         border: 1px gold solid;
         display: block; 
+        opacity: 0.8;
+        width: 100%;
+       
     }
-    nav.down .menu button p{
-        width: 350px;
-        font-size: 40px;
-        top: -10px;
-    }
+   
     nav.down .menu button div.out2{
-        left: 80px;
+        
         z-index: 2;
-        text-align: left;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        
+        
+        text-align: center;
+        
     }
     
+     nav.down .menu button div.out2 p{
+        
+        z-index: 2;
+        width: 100%;
+         top: 0;
+        text-align: center;
+        font-size: 80px;
+         
+         margin: 0;
+         padding: 0;
+         position: absolute;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+    }
+    
+    nav.down .menu button div.out2#homeout{
+        top: 40px;
+        
+    }
+    nav.down .menu button div.out2#lagerout{
+        top: 50px;
+        
+    }
+    nav.down .menu button div.out2#profileout{
+        top: 50px;
+        
+    }
+    .menu .shopsmall .out2{
+        top: 0;
+        left: 0;
+    }
     .menu .Home:hover .out2#homeout{
-        left: 100px;
+       left: 0;
+        top: 30px;
     }
     .menu .shopsmall:hover .out2#shopout{
-        left: 100px;
+       
+        left: 0;
+        top: 20px;
+
+
     }
     .menu .lager:hover .out2#lagerout{
-       left: 100px;
+        
+       left: 0;
+        top: 40px;
+
+
     }
     .menu .profile:hover .out2#profileout{
-        left: 100px;
-    }
-    .menubutton .gold.up, .menubutton .gold.down{
-        width: 140px;
-    }
-    .menubutton h3{
-        color: gold;
+       
+        left: 0;
+        top: 40px;
+
+
     }
 }
 @media only screen and (max-width: 800px) {
@@ -1309,6 +1541,37 @@ footer.add{
     .off h3#offunder{
         top: 24%;
     }
+    
+    
+    #off p{
+        top: 10%;
+    }
+    
+    
+    #off2 h3#offtitle{
+        top: -2vw; 
+        left: 445px;
+    }
+    #off2 div#pbg{
+        top: 2vw;
+        left: 390px;
+    }
+    #off2 p{
+        left: 440px;
+        top:100px; 
+    }
+    
+    #off2 div#offbild{
+        top: 10px;
+        left: 1px;
+    }
+    
+    
+    .off button#offbutt{
+        right: 15px;
+        transition: 1s;
+    }
+    
 }
 @media only screen and (max-width: 1300px){
     
@@ -1318,33 +1581,129 @@ footer.add{
         top: 20px;
     }
     
+    .off button#offbutt{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        
+    }
     
-}
-@media only screen and (max-width: 1000px) {
-    .off{
-        height: 650px;
+    
+    #off2 div#pbg{
+        left: 500px;
+        
     }
-    .off #offbild{
-        top: 20px;
-        left: 20vw;
+    
+    #off2 h3#offtitle{
+        left: 545px;
     }
-    .off #offtitle{
-        top: 230px;
-        left: 20vw;
+    
+    #off2 p{
+        left: 540px;
     }
-    .off h3#offunder{
-        top: 300px;
-        left: 20vw;
+    
+    
+    #off p{
+        top: 10px;
     }
-    .off #offbutt{
-        top: 500px;
-        left: 25vw;
-    }
+    
     
     
 }
 
+@media only screen and (max-width: 1200px){
+    
+    #off2 div#pbg{
+        left: 450px;
+        
+    }
+    
+    #off2 h3#offtitle{
+        left: 495px;
+    }
+    
+    #off2 p{
+        left: 490px;
+    }
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+/*ITEMS*/
+
+@media only screen and (max-width: 1600px){
+    
+    section#items{
+        top: 130vw;
+    }
+    
+}
+@media only screen and (max-width: 1400px){
+    
+    
+    section#items{
+        height: 800px;
+    }
+    /*Text*/
+    section#items div.item h2{
+        font-size: 23px;
+        top: -15px;
+    }
+    
+    section#items div.item h3{
+        font-size: 15px;
+    }
+    
+    section#items div.item p{
+        font-size: 15px;
+    }
+    
+    /*Button*/
+    section#items div.item button{
+        width: 50%;;
+        height: 20%;
+        left: 25%;
+    }
+    section#items div.item button p#norm{
+        
+        top: -30px;
+    }
+    section#items div.item button p#hov{
+        top: -30px;
+    }
+    
+    
+    
+    
+    section#items div.item div#itembild{
+        
+        height: 200px;
+    }
+    
+}
+
+
+
 /*Footer*/ 
+
+
+@media only screen and (max-width: 1600px){
+    
+    footer{
+        top: 220vw;
+    }
+    
+}
+
 @media only screen and (max-width: 1000px) {
    
     
@@ -1373,7 +1732,167 @@ footer.add{
 }
 
 
-
+@media only screen and (max-width: 1000px) {
+    
+    
+    #off2{
+        top:1200px;
+        height: 600px;
+    }
+    
+    #off2 div#offbild{
+        width: 60%;
+        left: 20%;
+       position: absolute;
+    }
+    
+    #off2 div#pbg{
+        position: absolute;
+        left: 10%;
+        width: 80%;
+        height: 50%;
+        top: 45%
+    }
+    
+    #off2 h3#offtitle{
+        text-align: center;
+        left: 10%;
+        
+        width: 80%;
+        height: 50%;
+        top: 38%
+    }
+    #off2 p{
+        left: 15%;
+        width: 70%;
+        height: 50%;
+        top: 60%;
+        font-size: 30px;
+    }
+    
+    
+    #off{
+        top: 2000px;
+        
+        height: 700px;
+    }
+    #off div#offbild{
+        height: 100%;
+        width: 50%;
+        left: 25%
+        
+    }
+    #off h3#offtitle{
+        top: 50%;
+        width: 40%;
+        left: 30%;
+        text-align: center;
+    }
+    #off h3#offunder{
+        top: 55%;
+        width: 40%;
+        left: 30%;
+        text-align: center;
+    }
+    #off p{
+        top:78%;
+        height: 15%;
+        width: 70%;
+        left: 15%;
+        text-align: center;
+    }
+    
+    section#items{
+        top: 3000px;
+        height: 1000px;
+        width: 80%;
+        left: 12%;
+        flex-flow: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
+    }
+    section#items div.item{
+        height: 800px;
+        width: 90%;
+        margin: none;
+        padding: none;
+        
+    }
+    section#items div.item div#itembild{
+        width: 60%;
+        height: 100%;
+        left: 20%;
+    
+        
+    
+    
+    
+    }    
+    section#items div.item h2{
+        
+        
+        position: absolute;
+    
+        top: 50%;
+        font-size: 40px;
+    
+    
+    
+    } 
+    
+    section#items div.item h3{
+        
+        
+        position: absolute;
+    
+        top: 55%;
+        font-size: 35px;
+    
+    
+    
+    } 
+    section#items div.item p{
+        
+        
+        position: absolute;
+    
+        top: 60%;
+        
+        font-size: 30px;
+    
+    
+    } 
+    section#items div.item button{
+        
+        
+        position: absolute;
+    
+        top: 70%;
+        
+    
+        font-size: 50px;
+    
+    } 
+    
+    section#items div.item button p#norm{
+        font-size: 60px;
+        top: -20px;
+        position: absolute;
+    } 
+    section#items div.item button p#hov{
+        font-size: 60px;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: -20px;
+    
+    } 
+    footer{
+        top: 7000px;
+    }
+    
+}
 
 
 
