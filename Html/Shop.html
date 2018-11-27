@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
+   
+   <link rel="stylesheet" href="../Css/Shop.css">
+   <link rel="stylesheet" href="../Css/Main.css">
     <meta charset="UTF-8">
     <title>Document</title>
-    
-    <link rel="stylesheet" href="../Css/Main.css">
-    <link rel="stylesheet" href="../Css/Home.css">
-    
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
 </head>
 <body>
-    
-    
-    
-   
     <div class="menubutton">
         <h3>Menu</h3>
         <div class="up gold"></div>
@@ -26,8 +20,6 @@
         <div class="left black"></div>
         <div class="right black"></div>
     </div>
-    
-    
     <button class="profileic"></button>
     
     <!-- NAVIGERING-->
@@ -41,9 +33,9 @@
         
         <div class="bigmenu">
            
-            <button onclick="location.href = 'Home.html';" class="navbutt leftb butt1 lefts">
+            <button  onclick="location.href = 'Home.html';" class="navbutt leftb butt1 lefts">
                 
-                <p>Home</p>
+                <p onclick="">Home</p>
                 <div class="up gold"></div>
                 <div class="down gold"></div>
                 <div class="left gold"></div>
@@ -90,21 +82,11 @@
             
 
            <div class="rights dec"></div>
-       
             <div class="rights decu"></div>
             <div class="lefts decu"></div>
             <div class="lefts dec"></div>
        
-        </div>
-        
-        
-        
-        
-        
-        <!-- ARROW KEY -->
-        
-       
-        
+        </div>       
         <!-- Small Nav -->
         <div class="menu">
             <div id="bg"></div>
@@ -134,86 +116,63 @@
                     <p>Contact Us</p>
                 </div>
             </button>
-            
-            
-            
-        
-        
         </div>
-        
-        
-        
-        
-        
-        
-        
     </nav>
 
-    
-            
-    <!--Content, everything that needs to be in the site-->
+  
+  
     <div class="content">
-       
-       
-       <!--HEADER-->
+        
         <header>
-            
-            <!--Main title "Protein Fixarna"-->
-            <div id="title">
-                <div id="h1bg"></div>
-                 <h1 id="prot">tein</h1>
-                <h1 id="fix">Fixarna</h1>
-            </div>
-            
-            <!-- Offer in the header at the left of title -->
-            <section id="erb">
-                <div id="secbg"></div>
-                <h3 id="erbTitle">100% Whey</h3>
-                <h3 id="erbUnder">GOLD STANDARD</h3>
-                <h3 id="erbPrice">20%</h3>
-                
-                <div id="bild"></div>
-                
-                
-                
-                <button id="show"> BUY NOW</button>            
-            </section>
-            
-            
-            
-            
-            <button id="shop" class="bil">SHOP</button>
-           
+           <div class="bg"></div>
+            <h1 id="overtitle">Webb</h1>
+            <h1 id="undertitle">Shop</h1>
         </header>
         
-        <!-- Section offer number 1 -->
-        <section class="off" id="off">
-            <div id="offbg"></div>
-            
-            <div id="offbild"></div>
-            <h3 id="offtitle">Gainer ATLAS </h3>
-            <h3 id="offunder">40%</h3>
-            <p> 40% rabatt på gainer atlas</p>
-            <button id="offbutt">BUY NOW</button>
-            
-            
+        <section id="shopkats">
+            <div class="bg"></div>
+            <div class="kat kat1">
+                <h4>Protein</h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat2">
+                <h4>PWO</h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat3">
+                <h4>BCAA</h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat4">
+                <h4></h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat5">
+                <h4></h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat6">
+                <h4></h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat7">
+                <h4></h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat8">
+                <h4></h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat9">
+                <h4></h4>
+                <div class="bild"></div>
+            </div>
+            <div class="kat kat10">
+                <h4></h4>
+                <div class="bild"></div>
+            </div>
         </section>
         
-        <!-- Section offer number 2-->
-            
-        
-        <section class="off" id="off2">
-            <div id="offbg"></div>
-            
-            <div id="offbild"></div>
-            
-            <div id="pbg"></div>
-            <h3 id="offtitle">Månads Box</h3>
-            <p>Via våran sida kan du betala automatiskt en gång i månaden för att få hem egenvalda produkter samt många erbjudanden och produkter</p>
-            <button id="offbutt">Läs mer</button>
-            
-            
-        </section>
         
         <section id="items">
             <div class="item" id="item1">
@@ -286,23 +245,11 @@
         
         
         
-        <!-- FOOTER -->
-        <footer>
-            
-            <button class="butt">Help</button>
-            <button class="butt">&#9993;</button>
-            <button class="butt">Shop</button>
-            
-            <div class="logo">Logga</div>
-            
-           
-            
-            
-        </footer>
         
-        
-            
-        <!-- Jquery When bottom of page(NOT WORKING ATM)-->
+    </div>
+   
+   
+   <!-- Jquery When bottom of page(NOT WORKING ATM)-->
         <script>
         
         
@@ -397,9 +344,10 @@
         
         
         </script>
-        
-        
-    </div>
+      
+   
+   
+    
     
 </body>
 </html>
